@@ -1,0 +1,42 @@
+C:\Sviluppo\ASP.NET\EURISTest\EURIS.Entities\bin\Debug\EURIS.Entities.dll.config
+C:\Sviluppo\ASP.NET\EURISTest\EURIS.Entities\bin\Debug\EURIS.Entities.dll
+C:\Sviluppo\ASP.NET\EURISTest\EURIS.Entities\bin\Debug\EURIS.Entities.pdb
+C:\Sviluppo\ASP.NET\EURISTest\EURIS.Entities\bin\Debug\EntityFramework.dll
+C:\Sviluppo\ASP.NET\EURISTest\EURIS.Entities\bin\Debug\EntityFramework.xml
+C:\Sviluppo\ASP.NET\EURISTest\EURIS.Entities\obj\Debug\EURIS.Entities.csprojResolveAssemblyReference.cache
+C:\Sviluppo\ASP.NET\EURISTest\EURIS.Entities\obj\Debug\EURIS.Entities.dll
+C:\Sviluppo\ASP.NET\EURISTest\EURIS.Entities\obj\Debug\EURIS.Entities.pdb
+C:\Users\andrea\Documents\EURIS\Test ingresso\Original\EURISTest\EURISTest_vs2013\EURIS.Entities\bin\Debug\EURIS.Entities.dll.config
+C:\Users\andrea\Documents\EURIS\Test ingresso\Original\EURISTest\EURISTest_vs2013\EURIS.Entities\bin\Debug\EURIS.Entities.dll
+C:\Users\andrea\Documents\EURIS\Test ingresso\Original\EURISTest\EURISTest_vs2013\EURIS.Entities\bin\Debug\EURIS.Entities.pdb
+C:\Users\andrea\Documents\EURIS\Test ingresso\Original\EURISTest\EURISTest_vs2013\EURIS.Entities\bin\Debug\EntityFramework.dll
+C:\Users\andrea\Documents\EURIS\Test ingresso\Original\EURISTest\EURISTest_vs2013\EURIS.Entities\bin\Debug\EntityFramework.xml
+C:\Users\andrea\Documents\EURIS\Test ingresso\Original\EURISTest\EURISTest_vs2013\EURIS.Entities\obj\Debug\EURIS.Entities.csprojResolveAssemblyReference.cache
+C:\Users\andrea\Documents\EURIS\Test ingresso\Original\EURISTest\EURISTest_vs2013\EURIS.Entities\obj\Debug\EURIS.Entities.dll
+C:\Users\andrea\Documents\EURIS\Test ingresso\Original\EURISTest\EURISTest_vs2013\EURIS.Entities\obj\Debug\EURIS.Entities.pdb
+C:\Users\andrea\Documents\EURIS\Test ingresso\_Original\EURISTest\EURISTest_vs2013\EURIS.Entities\bin\Debug\EURIS.Entities.dll.config
+C:\Users\andrea\Documents\EURIS\Test ingresso\_Original\EURISTest\EURISTest_vs2013\EURIS.Entities\bin\Debug\EURIS.Entities.dll
+C:\Users\andrea\Documents\EURIS\Test ingresso\_Original\EURISTest\EURISTest_vs2013\EURIS.Entities\bin\Debug\EURIS.Entities.pdb
+C:\Users\andrea\Documents\EURIS\Test ingresso\_Original\EURISTest\EURISTest_vs2013\EURIS.Entities\bin\Debug\EntityFramework.dll
+C:\Users\andrea\Documents\EURIS\Test ingresso\_Original\EURISTest\EURISTest_vs2013\EURIS.Entities\bin\Debug\EntityFramework.xml
+C:\Users\andrea\Documents\EURIS\Test ingresso\_Original\EURISTest\EURISTest_vs2013\EURIS.Entities\obj\Debug\EURIS.Entities.csprojResolveAssemblyReference.cache
+C:\Users\andrea\Documents\EURIS\Test ingresso\_Original\EURISTest\EURISTest_vs2013\EURIS.Entities\obj\Debug\EURIS.Entities.dll
+C:\Users\andrea\Documents\EURIS\Test ingresso\_Original\EURISTest\EURISTest_vs2013\EURIS.Entities\obj\Debug\EURIS.Entities.pdb
+C:\Users\andrea\Documents\EURIS\Test ingresso\_Original\EURISTest\EURISTest_vs2015\EURIS.Entities\bin\Debug\EURIS.Entities.dll.config
+C:\Users\andrea\Documents\EURIS\Test ingresso\_Original\EURISTest\EURISTest_vs2015\EURIS.Entities\bin\Debug\EURIS.Entities.dll
+C:\Users\andrea\Documents\EURIS\Test ingresso\_Original\EURISTest\EURISTest_vs2015\EURIS.Entities\bin\Debug\EURIS.Entities.pdb
+C:\Users\andrea\Documents\EURIS\Test ingresso\_Original\EURISTest\EURISTest_vs2015\EURIS.Entities\bin\Debug\EntityFramework.dll
+C:\Users\andrea\Documents\EURIS\Test ingresso\_Original\EURISTest\EURISTest_vs2015\EURIS.Entities\bin\Debug\EntityFramework.xml
+C:\Users\andrea\Documents\EURIS\Test ingresso\_Original\EURISTest\EURISTest_vs2015\EURIS.Entities\obj\Debug\EURIS.Entities.csprojResolveAssemblyReference.cache
+C:\Users\andrea\Documents\EURIS\Test ingresso\_Original\EURISTest\EURISTest_vs2015\EURIS.Entities\obj\Debug\EURIS.Entities.dll
+C:\Users\andrea\Documents\EURIS\Test ingresso\_Original\EURISTest\EURISTest_vs2015\EURIS.Entities\obj\Debug\EURIS.Entities.pdb
+D:\Documents\MICHAEL\Curriculum\JOBS\EURIS\EURISTest_vs2015\EURIS.Entities\bin\Debug\EURIS.Entities.dll.config
+D:\Documents\MICHAEL\Curriculum\JOBS\EURIS\EURISTest_vs2015\EURIS.Entities\bin\Debug\EURIS.Entities.dll
+D:\Documents\MICHAEL\Curriculum\JOBS\EURIS\EURISTest_vs2015\EURIS.Entities\bin\Debug\EURIS.Entities.pdb
+D:\Documents\MICHAEL\Curriculum\JOBS\EURIS\EURISTest_vs2015\EURIS.Entities\bin\Debug\EntityFramework.dll
+D:\Documents\MICHAEL\Curriculum\JOBS\EURIS\EURISTest_vs2015\EURIS.Entities\bin\Debug\EntityFramework.xml
+D:\Documents\MICHAEL\Curriculum\JOBS\EURIS\EURISTest_vs2015\EURIS.Entities\obj\Debug\EURIS.Entities.csprojAssemblyReference.cache
+D:\Documents\MICHAEL\Curriculum\JOBS\EURIS\EURISTest_vs2015\EURIS.Entities\obj\Debug\EURIS.Entities.csproj.CoreCompileInputs.cache
+D:\Documents\MICHAEL\Curriculum\JOBS\EURIS\EURISTest_vs2015\EURIS.Entities\obj\Debug\EURIS.Entities.csproj.CopyComplete
+D:\Documents\MICHAEL\Curriculum\JOBS\EURIS\EURISTest_vs2015\EURIS.Entities\obj\Debug\EURIS.Entities.dll
+D:\Documents\MICHAEL\Curriculum\JOBS\EURIS\EURISTest_vs2015\EURIS.Entities\obj\Debug\EURIS.Entities.pdb

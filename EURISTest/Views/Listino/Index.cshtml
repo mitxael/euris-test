@@ -1,0 +1,37 @@
+﻿@using EURIS.Entities
+@using EURISTest.Models
+@model IEnumerable<EURIS.Entities.LocalDbEntities>
+
+@{
+    ViewBag.Title = "Listino";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th></th>
+        <th>Id</th>
+        <th>Codice</th>
+        <th>Descrizione</th>
+    </tr>
+
+@foreach (var listino in ViewBag.Listini) {
+    <tr>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { listino.Id }) |
+            @Html.ActionLink("Details", "Details", new { listino.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { listino.Id })
+        </td>
+        <td>@listino.Id</td>
+        <td>@listino.Codice</td>
+        <td>@listino.Descrizione</td>
+
+    </tr>
+}
+
+</table>

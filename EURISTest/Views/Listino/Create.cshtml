@@ -1,0 +1,26 @@
+﻿@model EURISTest.Models.ListinoModel
+
+@{
+    ViewBag.Title = "Nuovo Listino";
+}
+
+<h2>Nuovo Listino</h2>
+
+@using (Html.BeginForm("Save", "Listino"))
+{
+    @Html.ValidationSummary(true, "Please fix the following errors.")
+    <div class="form-group">
+        <label>Codice</label>
+        <div class="tt-container">
+            <input id="codice" name="codice" required type="text" value="" class="form-control" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Descrizione</label>
+        <div class="tt-container">
+            <input id="descrizione" name="descrizione" required type="text" value="" class="form-control" />
+        </div>
+    </div>
+    @Html.AntiForgeryToken()
+    <button type="submit" class="btn btn-primary">Save</button>
+}

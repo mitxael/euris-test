@@ -1,0 +1,18 @@
+﻿@model EURISTest.Models.ListinoModel
+
+@{
+    ViewBag.Title = Model.Id;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Listino #@Model.Id</h2>
+
+<li>Codice: @Model.Codice</li>
+<li>Descrizione: @Model.Descrizione</li>
+
+<ul>
+    @foreach (var prodotto in @Model.Prodotti)
+    {
+        <li>@prodotto.Codice &nbsp @prodotto.Descrizione</li>
+    }
+</ul>

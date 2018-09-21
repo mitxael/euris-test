@@ -1,0 +1,74 @@
+﻿@using EURISTest.Models
+@model EURISTest.Models.ListinoModel
+
+@{
+    ViewBag.Title = Model.Id;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Listino #@Model.Id</h2>
+
+<h3>Codice: @Model.Codice</h3>
+<h3>Descrizione: @Model.Descrizione</h3>
+<h3>Prodotti: </h3>
+
+<table style="border: 0px solid white; " cellpadding='0' cellspacing='0' border='0'>
+    <tr>
+        <th style="text-align: center;">ADDED</th>
+        <th></th>
+        <th style="text-align: center;">AVAILABLE</th>
+    </tr>
+    <tr>
+
+        <td bgcolor='darkgreen' style="border: 1px solid dimgrey; color: #fff; vertical-align: top">
+            <table cellpadding='0' cellspacing='0' border='0' width='50%' height='50%'>
+                <tr>
+                    <td>
+                        @foreach (var prodotto in @Model.Prodotti)
+                        {
+                            <tr onclick="location.href = '@Url.Action("RemoveProduct", "Listino", new { idListino = @Model.Id, idProdotto = @prodotto.Id, quantita = 1})'">
+                                <td>
+                                @prodotto.Codice
+                                <td>
+
+                                <td nowrap>
+                                    @prodotto.Descrizione
+                                </td>
+
+                            </tr>
+                        }
+                    </td>
+                </tr>
+            </table>
+        </td>
+
+        <td>
+        </td>
+
+        <td bgcolor='darkred' style="border: 1px solid dimgrey; color: #fff; vertical-align: top">
+            <table cellpadding='0' cellspacing='0' border='0' width='50%' height='50%'>
+                <tr>
+                    <td>
+                        @foreach (var prodotto in @Model.GetProdottiFree())
+                        {
+                            <tr onclick="location.href = '@Url.Action("AddProduct", "Listino", new { idListino = @Model.Id, idProdotto = @prodotto.Id, quantita = 1})'">
+                            <td>
+                                @prodotto.Codice
+                                <td>
+
+                                <td nowrap>
+                                    @prodotto.Descrizione
+                                </td>
+
+                            </tr>
+                        }
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+</table>
+
+<br/>
+<i style="color: gray;">(click on a product to either add or remove it) </i>

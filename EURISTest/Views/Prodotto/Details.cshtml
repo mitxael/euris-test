@@ -1,0 +1,11 @@
+﻿@model EURISTest.Models.ProdottoModel
+
+@{
+    ViewBag.Title = Model.Id;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Prodotto #@Model.Id</h2>
+
+<h3>Codice: @Model.Codice</h3>
+<h3>Descrizione: @Model.Descrizione</h3>

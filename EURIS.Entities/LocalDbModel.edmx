@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="LocalDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="DettaglioListinoSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id_listino" Type="int" />
+          <Property Name="Id_prodotto" Type="int" />
+          <Property Name="quantita" Type="int" />
+        </EntityType>
+        <EntityType Name="ListinoSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Codice" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Descrizione" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProdottoSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Codice" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Descrizione" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Listino">
+          <End Role="ListinoSet" Type="Self.ListinoSet" Multiplicity="0..1" />
+          <End Role="DettaglioListinoSet" Type="Self.DettaglioListinoSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ListinoSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DettaglioListinoSet">
+              <PropertyRef Name="Id_listino" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Prodotto">
+          <End Role="ProdottoSet" Type="Self.ProdottoSet" Multiplicity="0..1" />
+          <End Role="DettaglioListinoSet" Type="Self.DettaglioListinoSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProdottoSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DettaglioListinoSet">
+              <PropertyRef Name="Id_prodotto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="LocalDbModelStoreContainer">
+          <EntitySet Name="DettaglioListinoSet" EntityType="Self.DettaglioListinoSet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ListinoSet" EntityType="Self.ListinoSet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProdottoSet" EntityType="Self.ProdottoSet" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Listino" Association="Self.FK_Listino">
+            <End Role="ListinoSet" EntitySet="ListinoSet" />
+            <End Role="DettaglioListinoSet" EntitySet="DettaglioListinoSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Prodotto" Association="Self.FK_Prodotto">
+            <End Role="ProdottoSet" EntitySet="ProdottoSet" />
+            <End Role="DettaglioListinoSet" EntitySet="DettaglioListinoSet" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="LocalDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="DettaglioListino">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id_listino" Type="Int32" />
+          <Property Name="Id_prodotto" Type="Int32" />
+          <Property Name="quantita" Type="Int32" />
+          <NavigationProperty Name="ListinoSet" Relationship="Self.FK_Listino" FromRole="DettaglioListinoSet" ToRole="ListinoSet" />
+          <NavigationProperty Name="ProdottoSet" Relationship="Self.FK_Prodotto" FromRole="DettaglioListinoSet" ToRole="ProdottoSet" />
+        </EntityType>
+        <EntityType Name="Listino">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Codice" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Descrizione" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="DettaglioListinoSet" Relationship="Self.FK_Listino" FromRole="ListinoSet" ToRole="DettaglioListinoSet" />
+        </EntityType>
+        <EntityType Name="Prodotto">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Codice" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Descrizione" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="DettaglioListinoSet" Relationship="Self.FK_Prodotto" FromRole="ProdottoSet" ToRole="DettaglioListinoSet" />
+        </EntityType>
+        <Association Name="FK_Listino">
+          <End Role="ListinoSet" Type="LocalDbModel.Listino" Multiplicity="0..1" />
+          <End Role="DettaglioListinoSet" Type="LocalDbModel.DettaglioListino" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ListinoSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DettaglioListinoSet">
+              <PropertyRef Name="Id_listino" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Prodotto">
+          <End Role="ProdottoSet" Type="LocalDbModel.Prodotto" Multiplicity="0..1" />
+          <End Role="DettaglioListinoSet" Type="LocalDbModel.DettaglioListino" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProdottoSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DettaglioListinoSet">
+              <PropertyRef Name="Id_prodotto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DettaglioListinoSet" EntityType="LocalDbModel.DettaglioListino" />
+          <EntitySet Name="ListinoSet" EntityType="LocalDbModel.Listino" />
+          <EntitySet Name="ProdottoSet" EntityType="LocalDbModel.Prodotto" />
+          <AssociationSet Name="FK_Listino" Association="Self.FK_Listino">
+            <End Role="ListinoSet" EntitySet="ListinoSet" />
+            <End Role="DettaglioListinoSet" EntitySet="DettaglioListinoSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Prodotto" Association="Self.FK_Prodotto">
+            <End Role="ProdottoSet" EntitySet="ProdottoSet" />
+            <End Role="DettaglioListinoSet" EntitySet="DettaglioListinoSet" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="LocalDbModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="DettaglioListinoSet">
+            <EntityTypeMapping TypeName="LocalDbModel.DettaglioListino">
+              <MappingFragment StoreEntitySet="DettaglioListinoSet">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Id_listino" ColumnName="Id_listino" />
+                <ScalarProperty Name="Id_prodotto" ColumnName="Id_prodotto" />
+                <ScalarProperty Name="quantita" ColumnName="quantita" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListinoSet">
+            <EntityTypeMapping TypeName="LocalDbModel.Listino">
+              <MappingFragment StoreEntitySet="ListinoSet">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Codice" ColumnName="Codice" />
+                <ScalarProperty Name="Descrizione" ColumnName="Descrizione" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProdottoSet">
+            <EntityTypeMapping TypeName="LocalDbModel.Prodotto">
+              <MappingFragment StoreEntitySet="ProdottoSet">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Codice" ColumnName="Codice" />
+                <ScalarProperty Name="Descrizione" ColumnName="Descrizione" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
