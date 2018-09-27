@@ -1,7 +1,11 @@
 This application is an example of the use of ASP.NET, namely:
+
     •	MVC 4
+    
     •	Entity Framework
+    
     •	Linq
+    
     •	And MS SQL Server    
 
 FUNCTIONAL ANALYSIS
